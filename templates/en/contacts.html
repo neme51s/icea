@@ -1,0 +1,217 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ICEA - Contacts{% endblock %}
+
+{% block content %}
+<div class="container content-section">
+    <div class="row align-items-center mb-5">
+        <div class="col-md-2">
+            <img src="{% static 'images/logo.png' %}" alt="ICEA Logo" class="img-fluid" 
+                 onerror="this.src='{% static 'images/logo.png' %}'">
+        </div>
+        <div class="col-md-10">
+            <h1 class="section-title mb-0">Contacts</h1>
+            <p class="lead text-muted mt-2">Independent Center of Expertise and Appraisal</p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <!-- Contact Information -->
+        <div class="col-lg-6 mb-5">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-header bg-success text-white">
+                    <h4 class="mb-0"><i class="fas fa-address-card me-2"></i>Contact Information</h4>
+                </div>
+                <div class="card-body p-5">
+                    <div class="contact-item mb-4">
+                        <div class="d-flex align-items-start">
+                            <div class="contact-icon me-4">
+                                <i class="fas fa-map-marker-alt fa-2x text-success"></i>
+                            </div>
+                            <div>
+                                <h5>Address</h5>
+                                <p class="mb-0">Kyrgyz Republic<br>
+                                   Bishkek<br>
+                                   26 Orozbekova street </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item mb-4">
+                        <div class="d-flex align-items-start">
+                            <div class="contact-icon me-4">
+                                <i class="fas fa-phone fa-2x text-success"></i>
+                            </div>
+                            <div>
+                                <h5>Phones</h5>
+                                <p class="mb-2">
+                                    <strong>Reception:</strong><br>
+                                    <a href="tel:+996312540101" class="text-decoration-none text-dark">+996 (312) 39-82-10</a>
+                                </p>
+                                <p class="mb-2">
+                                    <strong>On assessment issues</strong><br>
+                                    <a href="tel:+996312540102" class="text-decoration-none text-dark">+996 (312) 39-82-11</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item mb-4">
+                        <div class="d-flex align-items-start">
+                            <div class="contact-icon me-4">
+                                <i class="fas fa-envelope fa-2x text-success"></i>
+                            </div>
+                            <div>
+                                <h5>Email</h5>
+                                <p class="mb-2">
+                                    <strong>Email:</strong><br>
+                                    <a href="mailto:info@icea.kg" class="text-decoration-none text-dark">info@icea.kg</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="d-flex align-items-start">
+                            <div class="contact-icon me-4">
+                                <i class="fas fa-clock fa-2x text-success"></i>
+                            </div>
+                            <div>
+                                <h5>Working Hours</h5>
+                                <p class="mb-2">
+                                    <strong>Monday - Friday:</strong><br>
+                                    9:00 - 18:00
+                                </p>
+                                <p class="mb-0">
+                                    <strong>Saturday:</strong><br>
+                                    10:00 - 15:00 (by appointment)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Map -->
+        <div class="col-lg-6 mb-5">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-header bg-success text-white">
+                    <h4 class="mb-0"><i class="fas fa-map-marked-alt me-2"></i>We are on the map</h4>
+                </div>
+                <div class="card-body p-0">
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.2305397811406!2d74.59948891226155!3d42.86797797102985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb7d0f6205fdb%3A0x8a305b2f4cf157dc!2zMjYsINCe0YDQvtC30LHQtdC60L7QstC-IDI2LCDQntGA0L7Qt9Cx0LXQutC-0LIg0LrTqdGH06nRgdKvLCDQkdC40YjQutC10Lo!5e0!3m2!1sru!2skg!4v1770730617807!5m2!1sru!2skg" 
+                            width="100%" 
+                            height="500" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Additional Information -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card border-0 bg-light-green">
+                <div class="card-body p-4">
+                    <div class="row">
+                        <div class="col-md-4 mb-4 mb-md-0">
+                            <div class="text-center">
+                                <i class="fas fa-car fa-3x text-success mb-3"></i>
+                                <h5>How to get</h5>
+                                <p class="mb-0 small">Nearest stop: "BC Victoria". Buses: 1, 12, 25, 35. Minibuses: 107, 115, 120.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 mb-4 mb-md-0">
+                            <div class="text-center">
+                                <i class="fas fa-parking fa-3x text-success mb-3"></i>
+                                <h5>Parking</h5>
+                                <p class="mb-0 small">Free parking is available for clients on the territory of the business center.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="text-center">
+                                <i class="fas fa-calendar-check fa-3x text-success mb-3"></i>
+                                <h5>Appointment</h5>
+                                <p class="mb-0 small">Preliminary appointment by phone is recommended to save your time.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.contact-item {
+    padding: 20px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.contact-item:last-child {
+    border-bottom: none;
+}
+
+.contact-icon {
+    width: 40px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.contact-item h5 {
+    color: var(--icea-green);
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.contact-item p {
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.map-container {
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .contact-icon {
+        width: 30px;
+    }
+    
+    .contact-icon i {
+        font-size: 1.5rem;
+    }
+}
+</style>
+{% endblock %}

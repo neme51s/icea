@@ -1,0 +1,386 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ICEA - Тренинги{% endblock %}
+
+{% block content %}
+<div class="container content-section">
+    <h1 class="section-title">Тренинги</h1>
+    
+    <!-- Введение -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-5">
+                    <div class="row align-items-center">
+                        <div class="col-md-4 text-center mb-4 mb-md-0">
+                            <i class="fas fa-chalkboard-teacher fa-6x text-success"></i>
+                        </div>
+                        <div class="col-md-8">
+                            <h3 class="mb-4">Что такое тренинг?</h3>
+                            <p class="lead">
+                                Тренинг — это интенсивный курс обучения, сочетающий краткие теоретические семинары 
+                                и практическую отработку навыков за короткий срок.
+                            </p>
+                            <p>
+                                Мы проводим тренинги по продажам, тренинги по управлению персоналом, переговорам, 
+                                разработке стратегии развития, а также по целому ряду других важных бизнес-навыков. 
+                                Наши тренинги подкреплены опытом компании в различных сферах, что позволяет слушателям 
+                                принять какую-либо концепцию с практической точки зрения. Также, в тренингах обязательно 
+                                существуют ролевые и ситуационные игры, что держит слушателей заинтересованными и вовлеченными.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Категории тренингов -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h3 class="text-center mb-4">Направления тренингов</h3>
+            
+            <div class="row">
+                <!-- Коммуникации -->
+                <div class="col-md-4 mb-4">
+                    <div class="training-category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h4>Коммуникации</h4>
+                        <p>Тренинги по эффективным коммуникациям, переговорам и взаимодействию в команде</p>
+                        <a href="#communications" class="btn btn-sm btn-outline-success">Подробнее</a>
+                    </div>
+                </div>
+                
+                <!-- Маркетинг -->
+                <div class="col-md-4 mb-4">
+                    <div class="training-category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h4>Маркетинг</h4>
+                        <p>Обучение современным маркетинговым стратегиям и инструментам продвижения</p>
+                        <a href="#marketing" class="btn btn-sm btn-outline-success">Подробнее</a>
+                    </div>
+                </div>
+                
+                <!-- Другие бизнес тренинги -->
+                <div class="col-md-4 mb-4">
+                    <div class="training-category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h4>Другие бизнес тренинги</h4>
+                        <p>Развитие лидерских качеств, управление проектами, финансовые навыки и многое другое</p>
+                        <a href="#other" class="btn btn-sm btn-outline-success">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Детальная информация о тренингах -->
+    <div class="row">
+        <!-- Бизнес коммуникации -->
+        <div class="col-12 mb-5" id="communications">
+            <div class="card border-success">
+                <div class="card-header bg-success text-white d-flex justify-content-between align-items-center">
+                    <h4 class="mb-0"><i class="fas fa-comments me-2"></i>Бизнес коммуникации</h4>
+                    <span class="badge bg-light text-success">Популярно</span>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="training-card">
+                                <h5>«Коммуникации и личная эффективность»</h5>
+                                <ul class="training-features">
+                                    <li><i class="fas fa-check text-success me-2"></i>Эффективное общение в команде</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Управление эмоциями и стрессом</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Тайм-менеджмент и организация рабочего времени</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Развитие эмоционального интеллекта</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Публичные выступления и презентации</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="training-card">
+                                <h5>«Управленческие и коммерческие коммуникации»</h5>
+                                <ul class="training-features">
+                                    <li><i class="fas fa-check text-success me-2"></i>Эффективные переговоры</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Решение конфликтных ситуаций</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Управление командой и мотивация</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Обратная связь и оценка персонала</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Навыки деловой переписки</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Бизнес коммуникации (дополнительные) -->
+        <div class="col-12 mb-5">
+            <div class="card border-info">
+                <div class="card-header bg-info text-white">
+                    <h4 class="mb-0"><i class="fas fa-comments me-2"></i>Дополнительные тренинги по коммуникациям</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="training-card">
+                                <h5>«Эффективные переговоры»</h5>
+                                <p>Техники ведения переговоров, подготовка к переговорам, работа с возражениями.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="training-card">
+                                <h5>«Публичные выступления»</h5>
+                                <p>Подготовка и проведение презентаций, работа с аудиторией, управление волнением.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="training-card">
+                                <h5>«Командная работа»</h5>
+                                <p>Построение эффективных команд, распределение ролей, решение командных задач.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Маркетинг тренинги -->
+        <div class="col-12 mb-5" id="marketing">
+            <div class="card border-warning">
+                <div class="card-header bg-warning text-white">
+                    <h4 class="mb-0"><i class="fas fa-bullseye me-2"></i>Маркетинговые тренинги</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="training-card">
+                                <h5>«Стратегический маркетинг»</h5>
+                                <ul>
+                                    <li>Анализ рынка и конкурентов</li>
+                                    <li>Сегментация и позиционирование</li>
+                                    <li>Разработка маркетинговой стратегии</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="training-card">
+                                <h5>«Цифровой маркетинг»</h5>
+                                <ul>
+                                    <li>SMM и контент-маркетинг</li>
+                                    <li>SEO и контекстная реклама</li>
+                                    <li>Аналитика и метрики</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="training-card">
+                                <h5>«Продажи и маркетинг»</h5>
+                                <ul>
+                                    <li>Интеграция продаж и маркетинга</li>
+                                    <li>Генерация лидов</li>
+                                    <li>Воронка продаж</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Другие бизнес тренинги -->
+        <div class="col-12" id="other">
+            <div class="card border-primary">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0"><i class="fas fa-briefcase me-2"></i>Другие бизнес тренинги</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="training-card">
+                                <h5>«Лидерство и управление»</h5>
+                                <ul>
+                                    <li>Стили лидерства</li>
+                                    <li>Принятие управленческих решений</li>
+                                    <li>Мотивация персонала</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="training-card">
+                                <h5>«Управление проектами»</h5>
+                                <ul>
+                                    <li>Планирование и контроль проектов</li>
+                                    <li>Управление рисками</li>
+                                    <li>Agile и Scrum методологии</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="training-card">
+                                <h5>«Финансы для нефинансистов»</h5>
+                                <ul>
+                                    <li>Основы финансового учета</li>
+                                    <li>Анализ финансовой отчетности</li>
+                                    <li>Бюджетирование и планирование</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Формат проведения -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="card border-0 bg-light-green">
+                <div class="card-body p-5">
+                    <h3 class="text-center mb-4">Формат проведения тренингов</h3>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="text-center">
+                                <div class="format-icon mb-3">
+                                    <i class="fas fa-users fa-3x text-success"></i>
+                                </div>
+                                <h5>Групповые тренинги</h5>
+                                <p>Обучение в группах до 15 человек с активным взаимодействием участников</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="text-center">
+                                <div class="format-icon mb-3">
+                                    <i class="fas fa-user-tie fa-3x text-success"></i>
+                                </div>
+                                <h5>Индивидуальный коучинг</h5>
+                                <p>Персональные занятия с фокусом на конкретные потребности клиента</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="text-center">
+                                <div class="format-icon mb-3">
+                                    <i class="fas fa-laptop fa-3x text-success"></i>
+                                </div>
+                                <h5>Онлайн обучение</h5>
+                                <p>Дистанционные тренинги через Zoom, Teams или другие платформы</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.training-category-card {
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.training-category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(46, 125, 50, 0.15);
+    border-color: var(--icea-green);
+}
+
+.category-icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--icea-green);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+}
+
+.training-category-card:hover .category-icon {
+    transform: scale(1.1) rotate(5deg);
+    background-color: var(--icea-dark-green);
+}
+
+.training-category-card h4 {
+    color: var(--icea-green);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.training-card {
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 25px;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.training-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-color: var(--icea-green);
+}
+
+.training-card h5 {
+    color: var(--icea-green);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.training-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+
+.training-features li {
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.training-features li:last-child {
+    border-bottom: none;
+}
+
+.training-duration {
+    background-color: var(--icea-gray);
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 0.9rem;
+    color: var(--icea-green);
+    font-weight: 500;
+}
+
+.format-icon {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    color: var(--icea-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 2rem;
+}
+</style>
+{% endblock %}

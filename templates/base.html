@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="{{ lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}ICEA - Независимый Центр Экспертизы и Оценки{% endblock %}</title>
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-xl navbar-light fixed-top">
+        <div class="container">
+            <div class="logo-container">
+                <img src="{% static 'images/logo.png' %}" alt="ICEA Logo" class="logo-img" onerror="this.src='{% static 'images/placeholder-logo.png' %}'">
+                <a class="navbar-brand" href="{% url 'home' %}?lang={{ lang }}">
+                    ICEA<br>
+                    <small class="logo-subtitle">
+                        {% if lang == 'ru' %}
+                            Независимый Центр Экспертизы и Оценки
+                        {% else %}
+                            Independent Center of Expertise and Appraisal
+                        {% endif %}
+                    </small>
+                </a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}?lang={{ lang }}">
+                            {% if lang == 'ru' %}Главная{% else %}Home{% endif %}
+                        </a>
+                    </li>
+                    
+                    <!-- О нас с выпадающим меню по наведению -->
+                    <li class="nav-item dropdown dropdown-hover">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                            {% if lang == 'ru' %}О нас{% else %}About{% endif %}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'about_company' %}?lang={{ lang }}">
+                                {% if lang == 'ru' %}Компания{% else %}Company{% endif %}
+                            </a></li>
+                            <li><a class="dropdown-item" href="{% url 'about_clients' %}?lang={{ lang }}">
+                                {% if lang == 'ru' %}Клиенты{% else %}Clients{% endif %}
+                            </a></li>
+                            <li><a class="dropdown-item" href="{% url 'about_partners' %}?lang={{ lang }}">
+                                {% if lang == 'ru' %}Партнёры{% else %}Partners{% endif %}
+                            </a></li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Услуги с выпадающим меню по наведению -->
+                    <li class="nav-item dropdown dropdown-hover">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                            {% if lang == 'ru' %}Услуги{% else %}Services{% endif %}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'services_valuation' %}?lang={{ lang }}">
+                                {% if lang == 'ru' %}Оценка имущества{% else %}Property Valuation{% endif %}
+                            </a></li>
+                            <li><a class="dropdown-item" href="{% url 'services_consulting' %}?lang={{ lang }}">
+                                {% if lang == 'ru' %}Консалтинг{% else %}Consulting{% endif %}
+                            </a></li>
+                            <li><a class="dropdown-item" href="{% url 'services_trainings' %}?lang={{ lang }}">
+                                {% if lang == 'ru' %}Тренинги{% else %}Trainings{% endif %}
+                            </a></li>
+                            <li><a class="dropdown-item" href="{% url 'services_legal' %}?lang={{ lang }}">
+                                {% if lang == 'ru' %}Юридические услуги{% else %}Legal Services{% endif %}
+                            </a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contacts' %}?lang={{ lang }}">
+                            {% if lang == 'ru' %}Контакты{% else %}Contacts{% endif %}
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- Переключатель языка -->
+                <div class="language-switcher">
+                    {% if lang == 'ru' %}
+                        <a href="{{ request.path }}?lang=en" class="lang-btn">
+                            <i class="fas fa-language me-2"></i>English
+                        </a>
+                    {% else %}
+                        <a href="{{ request.path }}?lang=ru" class="lang-btn">
+                            <i class="fas fa-language me-2"></i>Русский
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Контент -->
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5>ICEA</h5>
+                    <p>
+                        {% if lang == 'ru' %}
+                            Независимый Центр Экспертизы и Оценки. Профессионализм и качество.
+                        {% else %}
+                            Independent Center of Expertise and Appraisal. Professionalism and quality.
+                        {% endif %}
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5>{% if lang == 'ru' %}Навигация{% else %}Navigation{% endif %}</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="{% url 'home' %}?lang={{ lang }}">
+                            {% if lang == 'ru' %}Главная{% else %}Home{% endif %}
+                        </a></li>
+                        <li><a href="{% url 'about_company' %}?lang={{ lang }}">
+                            {% if lang == 'ru' %}О нас{% else %}About{% endif %}
+                        </a></li>
+                        <li><a href="{% url 'services_valuation' %}?lang={{ lang }}">
+                            {% if lang == 'ru' %}Услуги{% else %}Services{% endif %}
+                        </a></li>
+                        <li><a href="{% url 'contacts' %}?lang={{ lang }}">
+                            {% if lang == 'ru' %}Контакты{% else %}Contacts{% endif %}
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <h5>{% if lang == 'ru' %}Контакты{% else %}Contacts{% endif %}</h5>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> 
+                            {% if lang == 'ru' %}
+                                г. Бишкек, ул. Орозбекова, 26
+                            {% else %}
+                                Bishkek, Orozbekova st., 26
+                            {% endif %}
+                        </p>
+                        <p><i class="fas fa-phone"></i> +996 (312) 39-82-10</p>
+                        <p><i class="fas fa-envelope"></i> info@icea.kg</p>
+                    </address>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; {% now "Y" %} ICEA. 
+                    {% if lang == 'ru' %}
+                        Все права защищены.
+                    {% else %}
+                        All rights reserved.
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/dropdown-hover.js' %}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

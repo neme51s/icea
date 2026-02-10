@@ -1,0 +1,194 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ICEA - Компания{% endblock %}
+
+{% block content %}
+<div class="container content-section">
+    <h1 class="section-title">Компания</h1>
+    
+    <!-- Кнопка скачивания -->
+    <div class="text-center mb-5">
+        <a href="{% url 'download_company_profile' %}?lang={{ lang }}" class="btn btn-lg btn-download">
+            <i class="fas fa-download me-2"></i>
+            Скачать профайл компании Независимый Центр Экспертизы и Оценки
+        </a>
+    </div>
+    
+    <!-- Основная информация -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h3 class="mb-4">Основной деятельностью компании являются:</h3>
+            <ul class="list-group list-group-flush mb-4">
+                <li class="list-group-item bg-transparent">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Оценка всех видов имущества, включая оценку интеллектуальной собственности;
+                </li>
+                <li class="list-group-item bg-transparent">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    консалтинг и обучение в области маркетинга и управления.
+                </li>
+            </ul>
+            
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                    <p class="card-text">
+                        «Независимый Центр Экспертизы и Оценки» на рынке консультационных и оценочных услуг с 2001 года. 
+                        Компания работает в области оценки всех видов имущества, бизнеса, интеллектуальной собственности, 
+                        а также инвестиционных проектов. Компания также предоставляет услуги консалтинга, маркетинговых 
+                        и аналитических исследований, стратегического бизнес планирования, инвентаризации и построению 
+                        управленческих стратегий. Обширная сеть партнеров и наработанная клиентская база дает компании 
+                        возможность быстро и эффективно решать различные поставленные задачи. Мы активно работаем как с 
+                        местными и иностранными коммерческими компаниями, так и с международными и донорскими организациями.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Миссия -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card bg-light-green border-0">
+                <div class="card-body p-5">
+                    <h3 class="card-title text-center mb-4">
+                        <i class="fas fa-bullseye me-3"></i>Миссия
+                    </h3>
+                    <p class="card-text text-center lead">
+                        Содействовать экономическому развитию и успеху клиента, посредством предоставления 
+                        высококвалифицированных и эффективных решений. Мы раскрываем потенциал компаний для 
+                        их успешного развития.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Принципы -->
+    <div class="row">
+        <div class="col-12">
+            <h3 class="mb-4">Принципы</h3>
+            <p class="mb-4">
+                В нашей компании, мы придерживаемся трех основополагающих принципов:
+            </p>
+            
+            <div class="row">
+                <!-- Принцип 1: Ценность -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="principle-icon mb-3">
+                                <i class="fas fa-gem fa-3x" style="color: var(--icea-green);"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Ценность</h4>
+                            <p class="card-text">
+                                При работе с клиентом, мы стремимся создать для них ценность, 
+                                которую они используют для достижения успеха.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Принцип 2: Совершенство -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="principle-icon mb-3">
+                                <i class="fas fa-star fa-3x" style="color: var(--icea-green);"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Совершенство</h4>
+                            <p class="card-text">
+                                При создании ценности для клиента, мы ставим перед собой сложные задачи. 
+                                Принимая оптимальные решения, мы стремимся выполнять стопроцентную работу.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Принцип 3: Клиентский подход -->
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="principle-icon mb-3">
+                                <i class="fas fa-users fa-3x" style="color: var(--icea-green);"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Клиентский подход</h4>
+                            <p class="card-text">
+                                Мы всегда стремимся к подходу, ориентированному на заказчика и отвергаем все, 
+                                что может причинить неудобства клиенту.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Дополнительная информация -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="card border-success">
+                <div class="card-header bg-success text-white">
+                    <h4 class="mb-0"><i class="fas fa-chart-line me-2"></i>Наши достижения</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col-md-3 col-6 mb-3">
+                            <div class="counter" data-target="20">0</div>
+                            <h5>Лет на рынке</h5>
+                        </div>
+                        <div class="col-md-3 col-6 mb-3">
+                            <div class="counter" data-target="500">0</div>
+                            <h5>Завершенных проектов</h5>
+                        </div>
+                        <div class="col-md-3 col-6 mb-3">
+                            <div class="counter" data-target="100">0</div>
+                            <h5>Постоянных клиентов</h5>
+                        </div>
+                        <div class="col-md-3 col-6 mb-3">
+                            <div class="counter" data-target="30">0</div>
+                            <h5>Профессиональных экспертов</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Анимация счетчиков
+document.addEventListener('DOMContentLoaded', function() {
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+
+    const animateCounter = (counter) => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / speed;
+
+        if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(() => animateCounter(counter), 10);
+        } else {
+            counter.innerText = target;
+        }
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => {
+        observer.observe(counter);
+    });
+});
+</script>
+{% endblock %}

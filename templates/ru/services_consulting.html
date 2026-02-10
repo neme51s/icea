@@ -1,0 +1,335 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ICEA - Консалтинг{% endblock %}
+
+{% block content %}
+<div class="container content-section">
+    <h1 class="section-title">Консалтинг</h1>
+    
+    <!-- Введение -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-5">
+                    <h3 class="mb-4 text-center">Бизнес-консалтинг «Независимого Центра Экспертизы и Оценки»</h3>
+                    <p class="lead">
+                        Это профессиональная помощь наших специалистов в анализе и решении вопросов развития бизнеса. 
+                        Данная помощь включает в себя диагностику, планирование действий и выработку решений, внедрение 
+                        выбранных решений, завершение проекта и мониторинг реализации внедренных рекомендаций.
+                    </p>
+                    <p>
+                        Бизнес-консалтинг нашей компании поможет Вам решить вопросы управленческой, экономической, 
+                        финансовой, инвестиционной деятельности предприятия, стратегического планирования, улучшения 
+                        функционирования компании, оптимизации ведения бизнеса, исследования и прогнозирования рынков 
+                        сбыта, движения цен и другое.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Принципы работы -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card border-success">
+                <div class="card-header bg-success text-white">
+                    <h3 class="mb-0"><i class="fas fa-handshake me-2"></i>Наши принципы работы по предоставлению консалтинговых услуг</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="principle-item p-3 border rounded h-100">
+                                <div class="d-flex align-items-start">
+                                    <i class="fas fa-lock fa-2x text-success me-3"></i>
+                                    <div>
+                                        <h5>Конфиденциальность</h5>
+                                        <p class="mb-0">Сохранять конфиденциальность полученной от клиента информации</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="principle-item p-3 border rounded h-100">
+                                <div class="d-flex align-items-start">
+                                    <i class="fas fa-heart fa-2x text-success me-3"></i>
+                                    <div>
+                                        <h5>Доверие</h5>
+                                        <p class="mb-0">Поддерживать атмосферу доверия при работе с клиентом</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="principle-item p-3 border rounded h-100">
+                                <div class="d-flex align-items-start">
+                                    <i class="fas fa-times-circle fa-2x text-success me-3"></i>
+                                    <div>
+                                        <h5>Честность</h5>
+                                        <p class="mb-0">Отказываться от проекта, если нет уверенности в его успешной реализации</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="principle-item p-3 border rounded h-100">
+                                <div class="d-flex align-items-start">
+                                    <i class="fas fa-gavel fa-2x text-success me-3"></i>
+                                    <div>
+                                        <h5>Законность</h5>
+                                        <p class="mb-0">Не давать рекомендаций и не совершать действий, идущих вразрез с действующим законодательством</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <div class="principle-item p-3 border rounded">
+                                <div class="d-flex align-items-start">
+                                    <i class="fas fa-exclamation-triangle fa-2x text-success me-3"></i>
+                                    <div>
+                                        <h5>Информирование</h5>
+                                        <p class="mb-0">Честно и своевременно информировать заказчика о возможных рисках</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Услуги консалтинга -->
+    <div class="row">
+        <div class="col-12">
+            <h3 class="text-center mb-5">Наши услуги в области консалтинга</h3>
+            
+            <div class="row">
+                <!-- Стратегический консалтинг -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-chess-king"></i>
+                        </div>
+                        <h4>Стратегический консалтинг</h4>
+                        <ul class="service-features">
+                            <li>Оптимизация организационной структуры и ключевых бизнес-процессов</li>
+                            <li>Разработка стратегии развития бизнеса</li>
+                            <li>Постановка задач для структурных подразделений</li>
+                        </ul>
+                        <button class="btn btn-sm btn-outline-success mt-3" data-bs-toggle="modal" data-bs-target="#strategyModal">
+                            Подробнее
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Бизнес планирование -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Бизнес планирование</h4>
+                        <ul class="service-features">
+                            <li>Анализ рынка</li>
+                            <li>Разработка детального бизнес-плана</li>
+                            <li>Представление интересов предприятия перед третьими лицами</li>
+                        </ul>
+                        <button class="btn btn-sm btn-outline-success mt-3" data-bs-toggle="modal" data-bs-target="#planningModal">
+                            Подробнее
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Операционный консалтинг -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h4>Операционный консалтинг</h4>
+                        <ul class="service-features">
+                            <li>Организация учета и отчетности</li>
+                            <li>Управление взаимоотношений с клиентами</li>
+                            <li>Оптимизация поставок и логистики</li>
+                        </ul>
+                        <button class="btn btn-sm btn-outline-success mt-3" data-bs-toggle="modal" data-bs-target="#operationsModal">
+                            Подробнее
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Маркетинг-консалтинг -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h4>Маркетинг-консалтинг</h4>
+                        <ul class="service-features">
+                            <li>Разработка стратегических маркетинговых решений</li>
+                            <li>Анализ рынка предложения (конкурентов)</li>
+                            <li>Анализ рынка спроса (потребителей)</li>
+                        </ul>
+                        <button class="btn btn-sm btn-outline-success mt-3" data-bs-toggle="modal" data-bs-target="#marketingModal">
+                            Подробнее
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Финансовый консалтинг -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h4>Финансовый консалтинг</h4>
+                        <ul class="service-features">
+                            <li>Финансовый анализ хозяйственной деятельности</li>
+                            <li>Аудит бизнес процессов компании, DUE DILIGENCE</li>
+                            <li>Внедрение системы бюджетирования</li>
+                        </ul>
+                        <button class="btn btn-sm btn-outline-success mt-3" data-bs-toggle="modal" data-bs-target="#financeModal">
+                            Подробнее
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Управленческий консалтинг -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4>Управленческий консалтинг</h4>
+                        <ul class="service-features">
+                            <li>Консультирование по общим вопросам управления бизнесом</li>
+                            <li>Анализ и оптимизация оргструктуры компании</li>
+                            <li>Постановка финансового планирования</li>
+                        </ul>
+                        <button class="btn btn-sm btn-outline-success mt-3" data-bs-toggle="modal" data-bs-target="#managementModal">
+                            Подробнее
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальные окна для детальной информации -->
+{% include 'ru/includes/consulting_modals.html' %}
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.service-card {
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(46, 125, 50, 0.15);
+    border-color: var(--icea-green);
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--icea-green);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1) rotate(5deg);
+    background-color: var(--icea-dark-green);
+}
+
+.service-card h4 {
+    color: var(--icea-green);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.service-features li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.service-features li:before {
+    content: "✓";
+    color: var(--icea-green);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.service-features li:last-child {
+    border-bottom: none;
+}
+
+.principle-item {
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.principle-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(46, 125, 50, 0.1);
+    border-color: var(--icea-green);
+}
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Анимация карточек услуг
+document.addEventListener('DOMContentLoaded', function() {
+    const serviceCards = document.querySelectorAll('.service-card');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, index * 100);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    serviceCards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        observer.observe(card);
+    });
+});
+</script>
+{% endblock %}

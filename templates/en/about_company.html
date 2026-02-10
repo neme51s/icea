@@ -1,0 +1,195 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ICEA - Company{% endblock %}
+
+{% block content %}
+<div class="container content-section">
+    <h1 class="section-title">Company</h1>
+    
+    <!-- Download button -->
+    <div class="text-center mb-5">
+        <a href="{% url 'download_company_profile' %}?lang={{ lang }}" class="btn btn-lg btn-download">
+            <i class="fas fa-download me-2"></i>
+            Download Company Profile: Independent Center of Expertise and Appraisal
+        </a>
+    </div>
+    
+    <!-- Main information -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h3 class="mb-4">The main activities of the company are:</h3>
+            <ul class="list-group list-group-flush mb-4">
+                <li class="list-group-item bg-transparent">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Valuation of all types of property, including intellectual property valuation;
+                </li>
+                <li class="list-group-item bg-transparent">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Consulting and training in the field of marketing and management.
+                </li>
+            </ul>
+            
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                    <p class="card-text">
+                        "Independent Center of Expertise and Appraisal" has been in the consulting and valuation 
+                        services market since 2001. The company operates in the field of valuation of all types 
+                        of property, business, intellectual property, as well as investment projects. The company 
+                        also provides consulting services, marketing and analytical research, strategic business 
+                        planning, inventory and management strategy development. An extensive network of partners 
+                        and an established client base enable the company to quickly and effectively solve various 
+                        tasks. We actively work with both local and foreign commercial companies, as well as with 
+                        international and donor organizations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mission -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card bg-light-green border-0">
+                <div class="card-body p-5">
+                    <h3 class="card-title text-center mb-4">
+                        <i class="fas fa-bullseye me-3"></i>Mission
+                    </h3>
+                    <p class="card-text text-center lead">
+                        To contribute to the economic development and success of the client by providing 
+                        highly qualified and effective solutions. We reveal the potential of companies for 
+                        their successful development.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Principles -->
+    <div class="row">
+        <div class="col-12">
+            <h3 class="mb-4">Principles</h3>
+            <p class="mb-4">
+                In our company, we adhere to three fundamental principles:
+            </p>
+            
+            <div class="row">
+                <!-- Principle 1: Value -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="principle-icon mb-3">
+                                <i class="fas fa-gem fa-3x" style="color: var(--icea-green);"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Value</h4>
+                            <p class="card-text">
+                                When working with a client, we strive to create value for them, 
+                                which they use to achieve success.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Principle 2: Excellence -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="principle-icon mb-3">
+                                <i class="fas fa-star fa-3x" style="color: var(--icea-green);"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Excellence</h4>
+                            <p class="card-text">
+                                When creating value for the client, we set ourselves challenging tasks. 
+                                Making optimal decisions, we strive to perform one hundred percent work.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Principle 3: Customer Approach -->
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="principle-icon mb-3">
+                                <i class="fas fa-users fa-3x" style="color: var(--icea-green);"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Customer Approach</h4>
+                            <p class="card-text">
+                                We always strive for a customer-oriented approach and reject anything 
+                                that may cause inconvenience to the client.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Additional information -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="card border-success">
+                <div class="card-header bg-success text-white">
+                    <h4 class="mb-0"><i class="fas fa-chart-line me-2"></i>Our Achievements</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col-md-3 col-6 mb-3">
+                            <div class="counter" data-target="20">0</div>
+                            <h5>Years in the market</h5>
+                        </div>
+                        <div class="col-md-3 col-6 mb-3">
+                            <div class="counter" data-target="500">0</div>
+                            <h5>Completed projects</h5>
+                        </div>
+                        <div class="col-md-3 col-6 mb-3">
+                            <div class="counter" data-target="100">0</div>
+                            <h5>Regular clients</h5>
+                        </div>
+                        <div class="col-md-3 col-6 mb-3">
+                            <div class="counter" data-target="30">0</div>
+                            <h5>Professional experts</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Counter animation
+document.addEventListener('DOMContentLoaded', function() {
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+
+    const animateCounter = (counter) => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / speed;
+
+        if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(() => animateCounter(counter), 10);
+        } else {
+            counter.innerText = target;
+        }
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => {
+        observer.observe(counter);
+    });
+});
+</script>
+{% endblock %}

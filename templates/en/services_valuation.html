@@ -1,0 +1,347 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ICEA - Property Valuation{% endblock %}
+
+{% block content %}
+<div class="container content-section">
+    <h1 class="section-title">Property Valuation</h1>
+    
+    <!-- Types of valuation -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-header bg-success text-white">
+                    <h3 class="mb-0"><i class="fas fa-list-check me-2"></i>Our company offers the following types of valuation:</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex align-items-center">
+                                    <i class="fas fa-building fa-2x text-success me-3"></i>
+                                    <div>
+                                        <h6 class="mb-1">Commercial real estate</h6>
+                                        <p class="mb-0 text-muted small">offices, retail spaces and shops, pharmacies, beauty salons, etc.</p>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <i class="fas fa-map fa-2x text-success me-3"></i>
+                                    <div>
+                                        <h6 class="mb-1">Land plots</h6>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <i class="fas fa-home fa-2x text-success me-3"></i>
+                                    <div>
+                                        <h6 class="mb-1">Residential real estate</h6>
+                                        <p class="mb-0 text-muted small">apartments, houses</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex align-items-center">
+                                    <i class="fas fa-car fa-2x text-success me-3"></i>
+                                    <div>
+                                        <h6 class="mb-1">Machinery and equipment</h6>
+                                        <p class="mb-0 text-muted small">vehicles, production equipment, etc.</p>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <i class="fas fa-chart-line fa-2x text-success me-3"></i>
+                                    <div>
+                                        <h6 class="mb-1">Business (enterprise)</h6>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <i class="fas fa-lightbulb fa-2x text-success me-3"></i>
+                                    <div>
+                                        <h6 class="mb-1">Intellectual property</h6>
+                                        <p class="mb-0 text-muted small">patents, licenses, brands, software, goodwill, etc.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Why independent valuation is needed -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card border-info">
+                <div class="card-header bg-info text-white">
+                    <h3 class="mb-0"><i class="fas fa-question-circle me-2"></i>Why do you need independent valuation?</h3>
+                </div>
+                <div class="card-body">
+                    <p class="lead mb-4">
+                        Independent valuation is often necessary when carrying out any actions related to property. 
+                        The most common situations when independent expert valuation is required are:
+                    </p>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex align-items-start">
+                                    <i class="fas fa-handshake text-info mt-1 me-2"></i>
+                                    <span>transactions for the purchase and sale of residential, commercial real estate, land plots and other types of property;</span>
+                                </li>
+                                <li class="list-group-item d-flex align-items-start">
+                                    <i class="fas fa-gift text-info mt-1 me-2"></i>
+                                    <span>registration of inheritance or donation of real estate;</span>
+                                </li>
+                                <li class="list-group-item d-flex align-items-start">
+                                    <i class="fas fa-money-bill-wave text-info mt-1 me-2"></i>
+                                    <span>valuation of contribution to authorized capital;</span>
+                                </li>
+                                <li class="list-group-item d-flex align-items-start">
+                                    <i class="fas fa-balance-scale text-info mt-1 me-2"></i>
+                                    <span>property and legal disputes;</span>
+                                </li>
+                                <li class="list-group-item d-flex align-items-start">
+                                    <i class="fas fa-briefcase text-info mt-1 me-2"></i>
+                                    <span>making management and investment decisions;</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex align-items-start">
+                                    <i class="fas fa-file-contract text-info mt-1 me-2"></i>
+                                    <span>determining rental rates;</span>
+                                </li>
+                                <li class="list-group-item d-flex align-items-start">
+                                    <i class="fas fa-hand-holding-usd text-info mt-1 me-2"></i>
+                                    <span>lending against collateral;</span>
+                                </li>
+                                <li class="list-group-item d-flex align-items-start">
+                                    <i class="fas fa-chart-bar text-info mt-1 me-2"></i>
+                                    <span>revaluation of assets;</span>
+                                </li>
+                                <li class="list-group-item d-flex align-items-start">
+                                    <i class="fas fa-hard-hat text-info mt-1 me-2"></i>
+                                    <span>implementation of construction or reconstruction projects of real estate objects.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Why choose us -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card border-warning">
+                <div class="card-header bg-warning text-white">
+                    <h3 class="mb-0"><i class="fas fa-star me-2"></i>Why choose us?</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-item p-4 border rounded h-100">
+                                <div class="feature-icon mb-3">
+                                    <i class="fas fa-calendar-alt fa-3x text-warning"></i>
+                                </div>
+                                <h4>Over 13 years of experience</h4>
+                                <p>Our company has extensive experience in providing valuation services in the Kyrgyz market.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-item p-4 border rounded h-100">
+                                <div class="feature-icon mb-3">
+                                    <i class="fas fa-book fa-3x text-warning"></i>
+                                </div>
+                                <h4>Modern methodologies</h4>
+                                <p>Great attention is paid to the development of methodological base, which allows the use of modern valuation methods.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-item p-4 border rounded h-100">
+                                <div class="feature-icon mb-3">
+                                    <i class="fas fa-users fa-3x text-warning"></i>
+                                </div>
+                                <h4>Membership in professional organizations</h4>
+                                <p>The company has been a member of professional organizations for over 10 years (Association of Legal Entities "Kyrgyz Appraisers Association", "Union of Kyrgyz Appraisers")</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-item p-4 border rounded h-100">
+                                <div class="feature-icon mb-3">
+                                    <i class="fas fa-university fa-3x text-warning"></i>
+                                </div>
+                                <h4>EBRD accreditation</h4>
+                                <p>The company is included in the list of accredited consultants of the European Bank for Reconstruction and Development.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-item p-4 border rounded h-100">
+                                <div class="feature-icon mb-3">
+                                    <i class="fas fa-industry fa-3x text-warning"></i>
+                                </div>
+                                <h4>Experience in various sectors</h4>
+                                <p>The company has extensive experience working in various sectors of the economy, such as the financial sector, industry, etc.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-item p-4 border rounded h-100">
+                                <div class="feature-icon mb-3">
+                                    <i class="fas fa-certificate fa-3x text-warning"></i>
+                                </div>
+                                <h4>Qualified experts</h4>
+                                <p>The company's expert appraisers have numerous certificates from local and foreign institutions confirming their extensive knowledge.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service examples -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card border-primary">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0"><i class="fas fa-cogs me-2"></i>Our valuation services</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="service-card p-4 text-center border rounded h-100">
+                                <div class="service-icon mb-3">
+                                    <i class="fas fa-home fa-3x text-primary"></i>
+                                </div>
+                                <h4>Private residential house</h4>
+                                <ul class="list-unstyled mt-3">
+                                    <li class="mb-2"><i class="fas fa-home me-2 text-success"></i>house within the city</li>
+                                    <li class="mb-2"><i class="fas fa-tree me-2 text-success"></i>house outside the city</li>
+                                    <li><i class="fas fa-map me-2 text-success"></i>land plots</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="service-card p-4 text-center border rounded h-100">
+                                <div class="service-icon mb-3">
+                                    <i class="fas fa-building fa-3x text-primary"></i>
+                                </div>
+                                <h4>Apartment</h4>
+                                <ul class="list-unstyled mt-3">
+                                    <li class="mb-2"><i class="fas fa-handshake me-2 text-success"></i>valuation for purchase and sale transactions</li>
+                                    <li class="mb-2"><i class="fas fa-shield-alt me-2 text-success"></i>valuation for insurance purposes</li>
+                                    <li><i class="fas fa-gavel me-2 text-success"></i>valuation for inheritance rights</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="service-card p-4 text-center border rounded h-100">
+                                <div class="service-icon mb-3">
+                                    <i class="fas fa-car fa-3x text-primary"></i>
+                                </div>
+                                <h4>Automobile</h4>
+                                <ul class="list-unstyled mt-3">
+                                    <li class="mb-2"><i class="fas fa-car-side me-2 text-success"></i>passenger car</li>
+                                    <li class="mb-2"><i class="fas fa-truck me-2 text-success"></i>freight transport</li>
+                                    <li><i class="fas fa-tractor me-2 text-success"></i>specialized transport</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="service-card p-4 text-center border rounded h-100">
+                                <div class="service-icon mb-3">
+                                    <i class="fas fa-briefcase fa-3x text-primary"></i>
+                                </div>
+                                <h4>Commercial real estate</h4>
+                                <ul class="list-unstyled mt-3">
+                                    <li class="mb-2"><i class="fas fa-building me-2 text-success"></i>office premises</li>
+                                    <li><i class="fas fa-store me-2 text-success"></i>administrative premises (pharmacy, cafe, warehouse, etc.)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="service-card p-4 text-center border rounded h-100">
+                                <div class="service-icon mb-3">
+                                    <i class="fas fa-industry fa-3x text-primary"></i>
+                                </div>
+                                <h4>Industrial facilities</h4>
+                                <ul class="list-unstyled mt-3">
+                                    <li class="mb-2"><i class="fas fa-industry me-2 text-success"></i>factories</li>
+                                    <li class="mb-2"><i class="fas fa-industry me-2 text-success"></i>plants</li>
+                                    <li><i class="fas fa-hotel me-2 text-success"></i>boarding houses</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="service-card p-4 text-center border rounded h-100">
+                                <div class="service-icon mb-3">
+                                    <i class="fas fa-tools fa-3x text-primary"></i>
+                                </div>
+                                <h4>Equipment</h4>
+                                <ul class="list-unstyled mt-3">
+                                    <li class="mb-2"><i class="fas fa-laptop me-2 text-success"></i>computers</li>
+                                    <li class="mb-2"><i class="fas fa-print me-2 text-success"></i>office equipment</li>
+                                    <li><i class="fas fa-chair me-2 text-success"></i>furniture</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.feature-item {
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 193, 7, 0.2);
+    border-color: #ffc107;
+}
+
+.feature-icon {
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover .feature-icon {
+    transform: scale(1.1);
+}
+
+.service-card {
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(13, 110, 253, 0.2);
+    border-color: #0d6efd;
+}
+
+.service-icon {
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+.list-group-item {
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+</style>
+{% endblock %}

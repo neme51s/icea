@@ -1,0 +1,614 @@
+:root {
+    --icea-green: #2e7d32;
+    --icea-light-green: #4caf50;
+    --icea-dark-green: #1b5e20;
+    --icea-white: #ffffff;
+    --icea-gray: #f5f5f5;
+    --icea-light-gray: #fafafa;
+    --icea-border: #e0e0e0;
+}
+
+/* Базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--icea-white);
+    color: #333;
+    overflow-x: hidden;
+    line-height: 1.6;
+    padding-top: 80px; /* Для фиксированной навигации */
+}
+
+/* Навигация */
+.navbar {
+    background-color: var(--icea-white) !important;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--icea-green) !important;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: translateY(-2px);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.logo-img {
+    height: 50px;
+    width: 50px;
+    margin-right: 15px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.logo-img:hover {
+    transform: rotate(-5deg);
+}
+
+.logo-subtitle {
+    font-size: 0.8rem;
+    font-weight: normal;
+    color: var(--icea-dark-green);
+    display: block;
+    line-height: 1.2;
+}
+
+/* Выпадающие меню по наведению */
+.dropdown-hover {
+    position: relative;
+}
+
+.dropdown-hover .dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    min-width: 200px;
+    background-color: var(--icea-white);
+    border: 2px solid var(--icea-green);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(46, 125, 50, 0.15);
+    padding: 10px 0;
+}
+
+.dropdown-hover:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-hover .nav-link.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: middle;
+    content: "▾";
+    border: none;
+    font-size: 1.2em;
+}
+
+/* Навигационные ссылки */
+.nav-link {
+    color: var(--icea-green) !important;
+    font-weight: 500;
+    margin: 0 8px;
+    padding: 10px 15px !important;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    position: relative;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    color: var(--icea-white) !important;
+    background-color: var(--icea-light-green);
+    transform: translateY(-2px);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--icea-light-green);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+/* Выпадающие элементы */
+.dropdown-item {
+    color: var(--icea-green);
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    margin: 2px 8px;
+    font-weight: 500;
+}
+
+.dropdown-item:hover {
+    background-color: var(--icea-light-green);
+    color: var(--icea-white);
+    transform: translateX(5px);
+    box-shadow: 0 3px 10px rgba(46, 125, 50, 0.2);
+}
+
+/* Переключатель языка */
+.language-switcher {
+    margin-left: 20px;
+}
+
+.language-form {
+    display: inline-block;
+}
+
+.language-select {
+    border: 2px solid var(--icea-green);
+    color: var(--icea-green);
+    background: transparent;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 140px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%232e7d32' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 12px;
+    padding-right: 40px;
+}
+
+.language-select:hover {
+    background-color: var(--icea-green);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 125, 50, 0.3);
+}
+
+.language-select:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.3);
+}
+
+/* Основной контент */
+.main-content {
+    min-height: calc(100vh - 300px);
+}
+
+.content-section {
+    padding: 80px 0;
+}
+
+.section-title {
+    color: var(--icea-green);
+    border-bottom: 3px solid var(--icea-light-green);
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+    display: inline-block;
+    position: relative;
+    font-weight: 700;
+    font-size: 2.2rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: var(--icea-dark-green);
+    bottom: -3px;
+    left: 0;
+}
+
+/* Слайдер */
+.carousel {
+    margin-bottom: 50px;
+}
+
+.carousel-item {
+    height: 70vh;
+    min-height: 500px;
+    position: relative;
+}
+
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.carousel-caption {
+    background: rgba(46, 125, 50, 0.85);
+    padding: 30px 40px;
+    border-radius: 15px;
+    max-width: 700px;
+    margin: 0 auto;
+    bottom: 20%;
+    text-align: center;
+}
+
+.carousel-caption h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+/* Карточки */
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    background-color: var(--icea-gray);
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(46, 125, 50, 0.2);
+}
+
+.card-body {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card i {
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.card:hover i {
+    transform: scale(1.2) rotate(5deg);
+    color: var(--icea-dark-green);
+}
+
+.card-title {
+    color: var(--icea-green);
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.card-text {
+    color: #666;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+/* Кнопки */
+.btn {
+    background-color: var(--icea-green);
+    color: white;
+    border: none;
+    padding: 14px 35px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn:hover {
+    background-color: var(--icea-dark-green);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(46, 125, 50, 0.4);
+}
+
+.btn-lg {
+    padding: 16px 45px;
+    font-size: 1.1rem;
+}
+
+/* Статистика */
+.counter {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--icea-green);
+    margin-bottom: 10px;
+}
+
+/* Формы */
+.form-control {
+    border: 2px solid var(--icea-border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    border-color: var(--icea-light-green);
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+    outline: none;
+}
+
+/* Карта */
+.map-container {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 5px solid var(--icea-light-green);
+    height: 400px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Подвал */
+.footer {
+    background: linear-gradient(135deg, var(--icea-dark-green) 0%, var(--icea-green) 100%);
+    color: white;
+    padding: 70px 0 30px;
+    margin-top: 80px;
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--icea-light-green), var(--icea-green), var(--icea-light-green));
+}
+
+.footer h5 {
+    color: white;
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.footer p, .footer address p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.footer a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 5px 0;
+    display: inline-block;
+}
+
+.footer a:hover {
+    color: white;
+    transform: translateX(5px);
+}
+
+.footer ul {
+    padding-left: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer address i {
+    width: 20px;
+    margin-right: 12px;
+    color: var(--icea-light-green);
+    text-align: center;
+}
+
+.footer hr {
+    border-color: rgba(255, 255, 255, 0.1);
+    margin: 40px 0 30px;
+}
+
+/* Анимации */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-on-scroll {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Кнопка "наверх" */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--icea-green);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 5px 15px rgba(46, 125, 50, 0.4);
+}
+
+.scroll-top-btn:hover {
+    background-color: var(--icea-dark-green);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(46, 125, 50, 0.6);
+}
+
+.scroll-top-btn.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Адаптивные изображения */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Утилиты */
+.text-green {
+    color: var(--icea-green);
+}
+
+.bg-green {
+    background-color: var(--icea-green);
+}
+
+.bg-light-green {
+    background-color: var(--icea-light-green);
+}
+
+.bg-gray {
+    background-color: var(--icea-gray);
+}
+
+/* Плавная прокрутка */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Навигация при скролле */
+.navbar-scrolled {
+    padding: 10px 0 !important;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Кнопка скачивания */
+.btn-download {
+    background: linear-gradient(135deg, var(--icea-green) 0%, var(--icea-dark-green) 100%);
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(46, 125, 50, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-download:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(46, 125, 50, 0.6);
+    color: white;
+}
+
+.btn-download:active {
+    transform: translateY(-1px);
+}
+
+.btn-download::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-download:hover::after {
+    left: 100%;
+}
+
+/* Иконки принципов */
+.principle-icon {
+    transition: transform 0.3s ease;
+}
+
+.card:hover .principle-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Светло-зеленый фон */
+.bg-light-green {
+    background-color: rgba(76, 175, 80, 0.1) !important;
+}

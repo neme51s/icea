@@ -1,0 +1,334 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ICEA - Consulting{% endblock %}
+
+{% block content %}
+<div class="container content-section">
+    <h1 class="section-title">Consulting</h1>
+    
+    <!-- Introduction -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-5">
+                    <h3 class="mb-4 text-center">Business Consulting of the Independent Center of Expertise and Appraisal</h3>
+                    <p class="lead">
+                        This is professional assistance from our specialists in analyzing and solving business development issues. 
+                        This assistance includes diagnostics, action planning and solution development, implementation of selected 
+                        solutions, project completion and monitoring of the implementation of implemented recommendations.
+                    </p>
+                    <p>
+                        The business consulting of our company will help you solve issues of managerial, economic, financial, 
+                        investment activities of the enterprise, strategic planning, improving company functioning, optimizing 
+                        business operations, researching and forecasting sales markets, price movements, and more.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Work principles -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card border-success">
+                <div class="card-header bg-success text-white">
+                    <h3 class="mb-0"><i class="fas fa-handshake me-2"></i>Our work principles for providing consulting services</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="principle-item p-3 border rounded h-100">
+                                <div class="d-flex align-items-start">
+                                    <i class="fas fa-lock fa-2x text-success me-3"></i>
+                                    <div>
+                                        <h5>Confidentiality</h5>
+                                        <p class="mb-0">Maintain confidentiality of information received from the client</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="principle-item p-3 border rounded h-100">
+                                <div class="d-flex align-items-start">
+                                    <i class="fas fa-heart fa-2x text-success me-3"></i>
+                                    <div>
+                                        <h5>Trust</h5>
+                                        <p class="mb-0">Maintain an atmosphere of trust when working with clients</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="principle-item p-3 border rounded h-100">
+                                <div class="d-flex align-items-start">
+                                    <i class="fas fa-times-circle fa-2x text-success me-3"></i>
+                                    <div>
+                                        <h5>Honesty</h5>
+                                        <p class="mb-0">Refuse a project if there is no confidence in its successful implementation</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="principle-item p-3 border rounded h-100">
+                                <div class="d-flex align-items-start">
+                                    <i class="fas fa-gavel fa-2x text-success me-3"></i>
+                                    <div>
+                                        <h5>Legality</h5>
+                                        <p class="mb-0">Do not give recommendations or take actions that contradict current legislation</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <div class="principle-item p-3 border rounded">
+                                <div class="d-flex align-items-start">
+                                    <i class="fas fa-exclamation-triangle fa-2x text-success me-3"></i>
+                                    <div>
+                                        <h5>Informing</h5>
+                                        <p class="mb-0">Honestly and timely inform the customer about possible risks</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Consulting services -->
+    <div class="row">
+        <div class="col-12">
+            <h3 class="text-center mb-5">Our consulting services</h3>
+            
+            <div class="row">
+                <!-- Strategic consulting -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-chess-king"></i>
+                        </div>
+                        <h4>Strategic Consulting</h4>
+                        <ul class="service-features">
+                            <li>Optimization of organizational structure and key business processes</li>
+                            <li>Development of business development strategy</li>
+                            <li>Setting tasks for structural divisions</li>
+                        </ul>
+                        <button class="btn btn-sm btn-outline-success mt-3" data-bs-toggle="modal" data-bs-target="#strategyModal">
+                            Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Business planning -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Business Planning</h4>
+                        <ul class="service-features">
+                            <li>Market analysis</li>
+                            <li>Development of detailed business plan</li>
+                            <li>Representation of enterprise interests before third parties</li>
+                        </ul>
+                        <button class="btn btn-sm btn-outline-success mt-3" data-bs-toggle="modal" data-bs-target="#planningModal">
+                            Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Operational consulting -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h4>Operational Consulting</h4>
+                        <ul class="service-features">
+                            <li>Organization of accounting and reporting</li>
+                            <li>Customer relationship management</li>
+                            <li>Supply and logistics optimization</li>
+                        </ul>
+                        <button class="btn btn-sm btn-outline-success mt-3" data-bs-toggle="modal" data-bs-target="#operationsModal">
+                            Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Marketing consulting -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h4>Marketing Consulting</h4>
+                        <ul class="service-features">
+                            <li>Development of strategic marketing decisions</li>
+                            <li>Analysis of supply market (competitors)</li>
+                            <li>Analysis of demand market (consumers)</li>
+                        </ul>
+                        <button class="btn btn-sm btn-outline-success mt-3" data-bs-toggle="modal" data-bs-target="#marketingModal">
+                            Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Financial consulting -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h4>Financial Consulting</h4>
+                        <ul class="service-features">
+                            <li>Financial analysis of economic activity</li>
+                            <li>Audit of company business processes, DUE DILIGENCE</li>
+                            <li>Implementation of budgeting system</li>
+                        </ul>
+                        <button class="btn btn-sm btn-outline-success mt-3" data-bs-toggle="modal" data-bs-target="#financeModal">
+                            Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Management consulting -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4>Management Consulting</h4>
+                        <ul class="service-features">
+                            <li>Consulting on general business management issues</li>
+                            <li>Analysis and optimization of company organizational structure</li>
+                            <li>Setting up financial planning</li>
+                        </ul>
+                        <button class="btn btn-sm btn-outline-success mt-3" data-bs-toggle="modal" data-bs-target="#managementModal">
+                            Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal windows for detailed information -->
+{% include 'en/includes/consulting_modals.html' %}
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.service-card {
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(46, 125, 50, 0.15);
+    border-color: var(--icea-green);
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--icea-green);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1) rotate(5deg);
+    background-color: var(--icea-dark-green);
+}
+
+.service-card h4 {
+    color: var(--icea-green);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.service-features li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.service-features li:before {
+    content: "✓";
+    color: var(--icea-green);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.service-features li:last-child {
+    border-bottom: none;
+}
+
+.principle-item {
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.principle-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(46, 125, 50, 0.1);
+    border-color: var(--icea-green);
+}
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Animation of service cards
+document.addEventListener('DOMContentLoaded', function() {
+    const serviceCards = document.querySelectorAll('.service-card');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, index * 100);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    serviceCards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        observer.observe(card);
+    });
+});
+</script>
+{% endblock %}

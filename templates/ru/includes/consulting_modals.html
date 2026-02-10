@@ -1,0 +1,203 @@
+<!-- Модальное окно: Стратегический консалтинг -->
+<div class="modal fade" id="strategyModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title">Стратегический консалтинг</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4 text-center mb-4">
+                        <i class="fas fa-chess-king fa-4x text-success"></i>
+                    </div>
+                    <div class="col-md-8">
+                        <h5>Что включает стратегический консалтинг?</h5>
+                        <p>Мы помогаем компаниям определить долгосрочные цели и разработать стратегии их достижения.</p>
+                        <ul>
+                            <li>Анализ текущего состояния компании</li>
+                            <li>Определение миссии, видения и стратегических целей</li>
+                            <li>Разработка стратегических планов развития</li>
+                            <li>Оптимизация бизнес-процессов</li>
+                            <li>Управление стратегическими изменениями</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                <a href="{% url 'contacts' %}?lang={{ lang }}" class="btn btn-success">Заказать услугу</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно: Бизнес планирование -->
+<div class="modal fade" id="planningModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title">Бизнес планирование</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4 text-center mb-4">
+                        <i class="fas fa-chart-line fa-4x text-success"></i>
+                    </div>
+                    <div class="col-md-8">
+                        <h5>Комплексное бизнес-планирование</h5>
+                        <p>Разработка детальных бизнес-планов для привлечения инвестиций и управления развитием компании.</p>
+                        <ul>
+                            <li>Анализ рынка и конкурентов</li>
+                            <li>Финансовое моделирование</li>
+                            <li>Маркетинговый план</li>
+                            <li>Операционный план</li>
+                            <li>Оценка рисков</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                <a href="{% url 'contacts' %}?lang={{ lang }}" class="btn btn-success">Заказать услугу</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно: Операционный консалтинг -->
+<div class="modal fade" id="operationsModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title">Операционный консалтинг</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4 text-center mb-4">
+                        <i class="fas fa-cogs fa-4x text-success"></i>
+                    </div>
+                    <div class="col-md-8">
+                        <h5>Оптимизация операционных процессов</h5>
+                        <p>Повышение эффективности ежедневных операций компании для снижения затрат и увеличения производительности.</p>
+                        <ul>
+                            <li>Анализ и оптимизация бизнес-процессов</li>
+                            <li>Внедрение систем учета и отчетности</li>
+                            <li>Управление цепочками поставок</li>
+                            <li>Оптимизация логистики</li>
+                            <li>Улучшение качества обслуживания клиентов</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                <a href="{% url 'contacts' %}?lang={{ lang }}" class="btn btn-success">Заказать услугу</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно: Маркетинг-консалтинг -->
+<div class="modal fade" id="marketingModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title">Маркетинг-консалтинг</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4 text-center mb-4">
+                        <i class="fas fa-bullhorn fa-4x text-success"></i>
+                    </div>
+                    <div class="col-md-8">
+                        <h5>Стратегический маркетинг</h5>
+                        <p>Разработка и реализация эффективных маркетинговых стратегий для увеличения продаж и доли рынка.</p>
+                        <ul>
+                            <li>Анализ рынка и конкурентной среды</li>
+                            <li>Исследование потребительского поведения</li>
+                            <li>Разработка маркетинговых стратегий</li>
+                            <li>Позиционирование бренда</li>
+                            <li>Планирование маркетинговых кампаний</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                <a href="{% url 'contacts' %}?lang={{ lang }}" class="btn btn-success">Заказать услугу</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно: Финансовый консалтинг -->
+<div class="modal fade" id="financeModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title">Финансовый консалтинг</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4 text-center mb-4">
+                        <i class="fas fa-chart-pie fa-4x text-success"></i>
+                    </div>
+                    <div class="col-md-8">
+                        <h5>Финансовый анализ и управление</h5>
+                        <p>Оптимизация финансовой деятельности компании для повышения прибыльности и устойчивости.</p>
+                        <ul>
+                            <li>Финансовый анализ и диагностика</li>
+                            <li>Аудит бизнес-процессов</li>
+                            <li>Due diligence проверки</li>
+                            <li>Разработка систем бюджетирования</li>
+                            <li>Управление финансовыми рисками</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                <a href="{% url 'contacts' %}?lang={{ lang }}" class="btn btn-success">Заказать услугу</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно: Управленческий консалтинг -->
+<div class="modal fade" id="managementModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title">Управленческий консалтинг</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4 text-center mb-4">
+                        <i class="fas fa-user-tie fa-4x text-success"></i>
+                    </div>
+                    <div class="col-md-8">
+                        <h5>Управление организацией</h5>
+                        <p>Повышение эффективности управления компанией через оптимизацию организационной структуры и процессов.</p>
+                        <ul>
+                            <li>Анализ организационной структуры</li>
+                            <li>Разработка систем управления</li>
+                            <li>Организационное развитие</li>
+                            <li>Управление изменениями</li>
+                            <li>Развитие лидерских качеств руководства</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                <a href="{% url 'contacts' %}?lang={{ lang }}" class="btn btn-success">Заказать услугу</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,378 @@
+/* Адаптивные стили для всех устройств */
+
+/* Большие мониторы (≥1400px) */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    .carousel-caption {
+        max-width: 800px;
+    }
+    
+    .carousel-caption h3 {
+        font-size: 3rem;
+    }
+}
+
+/* Десктопы (≥1200px) */
+@media (min-width: 1200px) {
+    .navbar-expand-xl .dropdown-hover .dropdown-menu {
+        display: block;
+    }
+}
+
+/* Ноутбуки (≥992px) */
+@media (max-width: 1199.98px) {
+    .carousel-item {
+        height: 60vh;
+        min-height: 450px;
+    }
+    
+    .carousel-caption h3 {
+        font-size: 2.2rem;
+    }
+    
+    .carousel-caption {
+        padding: 25px;
+        bottom: 15%;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* Планшеты (≥768px) */
+@media (max-width: 991.98px) {
+    body {
+        padding-top: 70px;
+    }
+    
+    .navbar {
+        padding: 10px 0;
+    }
+    
+    .logo-img {
+        height: 40px;
+        width: 40px;
+        margin-right: 10px;
+    }
+    
+    .logo-subtitle {
+        font-size: 0.7rem;
+    }
+    
+    .navbar-collapse {
+        background-color: var(--icea-white);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        margin-top: 10px;
+    }
+    
+    /* На мобильных меню по клику, а не по наведению */
+    .dropdown-hover .dropdown-menu {
+        position: static;
+        float: none;
+        width: 100%;
+        margin-top: 0;
+        background-color: var(--icea-gray);
+        border: 1px solid var(--icea-border);
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        display: none;
+    }
+    
+    .dropdown-hover.show .dropdown-menu {
+        display: block;
+    }
+    
+    .dropdown-hover .nav-link.dropdown-toggle::after {
+        float: right;
+        margin-top: 8px;
+    }
+    
+    .nav-link {
+        margin: 5px 0;
+        padding: 12px 15px !important;
+    }
+    
+    .language-switcher {
+        margin: 15px 0 0;
+        width: 100%;
+    }
+    
+    .language-select {
+        width: 100%;
+    }
+    
+    .carousel-item {
+        height: 50vh;
+        min-height: 400px;
+    }
+    
+    .carousel-caption {
+        padding: 20px;
+        bottom: 10%;
+        max-width: 90%;
+    }
+    
+    .carousel-caption h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+    
+    .content-section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    
+    .card {
+        margin-bottom: 25px;
+    }
+    
+    .counter {
+        font-size: 2.5rem;
+    }
+    
+    .footer {
+        padding: 50px 0 25px;
+    }
+    
+    .footer .col-lg-4 {
+        margin-bottom: 30px;
+    }
+}
+
+/* Телефоны (≥576px) */
+@media (max-width: 767.98px) {
+    body {
+        padding-top: 65px;
+    }
+    
+    .logo-container {
+        flex-wrap: wrap;
+    }
+    
+    .logo-img {
+        height: 35px;
+        width: 35px;
+    }
+    
+    .carousel-item {
+        height: 40vh;
+        min-height: 300px;
+    }
+    
+    .carousel-caption {
+        padding: 15px;
+        bottom: 5%;
+    }
+    
+    .carousel-caption h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .carousel-caption p {
+        font-size: 0.9rem;
+        display: none; /* Скрываем текст на очень маленьких экранах */
+    }
+    
+    .content-section {
+        padding: 40px 0;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 25px;
+    }
+    
+    .btn {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+    
+    .btn-lg {
+        padding: 14px 30px;
+        font-size: 1rem;
+    }
+    
+    .card-body {
+        padding: 20px;
+    }
+    
+    .card i {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .counter {
+        font-size: 2rem;
+    }
+    
+    .map-container {
+        height: 300px;
+    }
+    
+    .footer {
+        padding: 40px 0 20px;
+        text-align: center;
+    }
+    
+    .footer address {
+        text-align: center;
+    }
+    
+    .footer ul {
+        text-align: center;
+    }
+    
+    .scroll-top-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+}
+
+/* Очень маленькие телефоны (<576px) */
+@media (max-width: 575.98px) {
+    .carousel-item {
+        height: 35vh;
+        min-height: 250px;
+    }
+    
+    .carousel-caption {
+        padding: 10px;
+        bottom: 5%;
+    }
+    
+    .carousel-caption h3 {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
+    
+    .content-section {
+        padding: 30px 0;
+    }
+    
+    .card {
+        margin-bottom: 20px;
+    }
+    
+    .counter {
+        font-size: 1.8rem;
+    }
+    
+    .map-container {
+        height: 250px;
+    }
+    
+    .footer {
+        padding: 30px 0 15px;
+    }
+    
+    .footer h5 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+    
+    .logo-brand {
+        font-size: 0.9rem;
+    }
+    
+    .logo-subtitle {
+        font-size: 0.6rem;
+    }
+}
+
+/* Портретная ориентация */
+@media (orientation: portrait) {
+    .carousel-item {
+        height: 40vh;
+    }
+}
+
+/* Ландшафтная ориентация */
+@media (orientation: landscape) and (max-height: 500px) {
+    .carousel-item {
+        height: 80vh;
+    }
+    
+    .carousel-caption {
+        bottom: 5%;
+        padding: 10px 20px;
+    }
+    
+    .carousel-caption h3 {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+    
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Высокие экраны */
+@media (min-height: 900px) {
+    .carousel-item {
+        height: 60vh;
+    }
+    
+    .main-content {
+        min-height: calc(100vh - 350px);
+    }
+}
+
+/* Адаптивные сетки */
+.row {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Печать */
+@media print {
+    .navbar,
+    .carousel,
+    .footer,
+    .scroll-top-btn,
+    .language-switcher {
+        display: none !important;
+    }
+    
+    body {
+        padding-top: 0;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: 100%;
+    }
+}

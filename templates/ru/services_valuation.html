@@ -1,0 +1,346 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ICEA - Оценка имущества{% endblock %}
+
+{% block content %}
+<div class="container content-section">
+    <h1 class="section-title">Оценка имущества</h1>
+    
+    <!-- Виды оценки -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-header bg-success text-white">
+                    <h3 class="mb-0"><i class="fas fa-list-check me-2"></i>Наша компания предлагает следующие виды оценки:</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex align-items-center">
+                                    <i class="fas fa-building fa-2x text-success me-3"></i>
+                                    <div>
+                                        <h6 class="mb-1">Коммерческой недвижимости</h6>
+                                        <p class="mb-0 text-muted small">офисы, торговые площади и магазины, аптеки, салоны красоты и т.п.</p>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <i class="fas fa-map fa-2x text-success me-3"></i>
+                                    <div>
+                                        <h6 class="mb-1">Земельных участков</h6>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <i class="fas fa-home fa-2x text-success me-3"></i>
+                                    <div>
+                                        <h6 class="mb-1">Жилой недвижимости</h6>
+                                        <p class="mb-0 text-muted small">квартиры, дома</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex align-items-center">
+                                    <i class="fas fa-car fa-2x text-success me-3"></i>
+                                    <div>
+                                        <h6 class="mb-1">Машин и оборудования</h6>
+                                        <p class="mb-0 text-muted small">транспортные средства, производственное оборудование и т.п.</p>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <i class="fas fa-chart-line fa-2x text-success me-3"></i>
+                                    <div>
+                                        <h6 class="mb-1">Бизнеса (предприятия)</h6>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <i class="fas fa-lightbulb fa-2x text-success me-3"></i>
+                                    <div>
+                                        <h6 class="mb-1">Интеллектуальной собственности</h6>
+                                        <p class="mb-0 text-muted small">патенты, лицензии, брэнды, программное обеспечение, goodwill и т.п.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Зачем нужна независимая оценка -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card border-info">
+                <div class="card-header bg-info text-white">
+                    <h3 class="mb-0"><i class="fas fa-question-circle me-2"></i>Зачем надо делать независимую оценку?</h3>
+                </div>
+                <div class="card-body">
+                    <p class="lead mb-4">
+                        Независимая оценка бывает необходима при осуществлении любых действий, связанных с имуществом. 
+                        Наиболее распространенными ситуациями, когда требуется независимая экспертная оценка, являются:
+                    </p>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex align-items-start">
+                                    <i class="fas fa-handshake text-info mt-1 me-2"></i>
+                                    <span>сделки купли-продажи жилой, коммерческой недвижимости, земельных участков и других видов имущества;</span>
+                                </li>
+                                <li class="list-group-item d-flex align-items-start">
+                                    <i class="fas fa-gift text-info mt-1 me-2"></i>
+                                    <span>оформление наследства или дарения недвижимости;</span>
+                                </li>
+                                <li class="list-group-item d-flex align-items-start">
+                                    <i class="fas fa-money-bill-wave text-info mt-1 me-2"></i>
+                                    <span>оценка вклада в уставный капитал;</span>
+                                </li>
+                                <li class="list-group-item d-flex align-items-start">
+                                    <i class="fas fa-balance-scale text-info mt-1 me-2"></i>
+                                    <span>имущественные и судебные споры;</span>
+                                </li>
+                                <li class="list-group-item d-flex align-items-start">
+                                    <i class="fas fa-briefcase text-info mt-1 me-2"></i>
+                                    <span>принятие управленческих и инвестиционных решений;</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex align-items-start">
+                                    <i class="fas fa-file-contract text-info mt-1 me-2"></i>
+                                    <span>определения арендной ставки;</span>
+                                </li>
+                                <li class="list-group-item d-flex align-items-start">
+                                    <i class="fas fa-hand-holding-usd text-info mt-1 me-2"></i>
+                                    <span>кредитование под залог;</span>
+                                </li>
+                                <li class="list-group-item d-flex align-items-start">
+                                    <i class="fas fa-chart-bar text-info mt-1 me-2"></i>
+                                    <span>переоценка активов;</span>
+                                </li>
+                                <li class="list-group-item d-flex align-items-start">
+                                    <i class="fas fa-hard-hat text-info mt-1 me-2"></i>
+                                    <span>реализация проектов строительства или реконструкции объектов недвижимости.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Почему именно мы -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card border-warning">
+                <div class="card-header bg-warning text-white">
+                    <h3 class="mb-0"><i class="fas fa-star me-2"></i>Почему именно мы?</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-item p-4 border rounded h-100">
+                                <div class="feature-icon mb-3">
+                                    <i class="fas fa-calendar-alt fa-3x text-warning"></i>
+                                </div>
+                                <h4>Более 13 лет опыта</h4>
+                                <p>В нашей компании большой опыт в предоставлении оценочных услуг на рынке Кыргызстана.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-item p-4 border rounded h-100">
+                                <div class="feature-icon mb-3">
+                                    <i class="fas fa-book fa-3x text-warning"></i>
+                                </div>
+                                <h4>Современные методики</h4>
+                                <p>Большое внимание уделяется развитию методологической базы, что позволяет применять современные методики оценки.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-item p-4 border rounded h-100">
+                                <div class="feature-icon mb-3">
+                                    <i class="fas fa-users fa-3x text-warning"></i>
+                                </div>
+                                <h4>Членство в профессиональных организациях</h4>
+                                <p>Компания является членом профессиональных организаций более 10 лет (Объединение юридических лиц «Кыргызская Ассоциация Оценщиков», «Объединение Кыргызских Оценщиков»)</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-item p-4 border rounded h-100">
+                                <div class="feature-icon mb-3">
+                                    <i class="fas fa-university fa-3x text-warning"></i>
+                                </div>
+                                <h4>Аккредитация ЕБРР</h4>
+                                <p>Компания входит в список аккредитованных консультантов Европейского Банка Развития и Реконструкции.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-item p-4 border rounded h-100">
+                                <div class="feature-icon mb-3">
+                                    <i class="fas fa-industry fa-3x text-warning"></i>
+                                </div>
+                                <h4>Опыт в различных сферах</h4>
+                                <p>Компания имеет большой опыт работы в различных сферах экономики, таких как финансовый сектор, промышленность и т.д.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-item p-4 border rounded h-100">
+                                <div class="feature-icon mb-3">
+                                    <i class="fas fa-certificate fa-3x text-warning"></i>
+                                </div>
+                                <h4>Квалифицированные эксперты</h4>
+                                <p>Эксперты-оценщики компании обладают большим количеством сертификатов от местных и иностранных учреждений, подтверждающих их обширные знания.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Примеры услуг -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card border-primary">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0"><i class="fas fa-cogs me-2"></i>Наши услуги по оценке</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="service-card p-4 text-center border rounded h-100">
+                                <div class="service-icon mb-3">
+                                    <i class="fas fa-home fa-3x text-primary"></i>
+                                </div>
+                                <h4>Частный жилой дом</h4>
+                                <ul class="list-unstyled mt-3">
+                                    <li class="mb-2"><i class="fas fa-home me-2 text-success"></i>дом в черте города</li>
+                                    <li class="mb-2"><i class="fas fa-tree me-2 text-success"></i>дом за городом</li>
+                                    <li><i class="fas fa-map me-2 text-success"></i>земельные участки</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="service-card p-4 text-center border rounded h-100">
+                                <div class="service-icon mb-3">
+                                    <i class="fas fa-building fa-3x text-primary"></i>
+                                </div>
+                                <h4>Квартира</h4>
+                                <ul class="list-unstyled mt-3">
+                                    <li class="mb-2"><i class="fas fa-handshake me-2 text-success"></i>оценка для сделки купли-продажи</li>
+                                    <li class="mb-2"><i class="fas fa-shield-alt me-2 text-success"></i>оценка для целей страхования</li>
+                                    <li><i class="fas fa-gavel me-2 text-success"></i>оценка на права наследства</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="service-card p-4 text-center border rounded h-100">
+                                <div class="service-icon mb-3">
+                                    <i class="fas fa-car fa-3x text-primary"></i>
+                                </div>
+                                <h4>Автомобиль</h4>
+                                <ul class="list-unstyled mt-3">
+                                    <li class="mb-2"><i class="fas fa-car-side me-2 text-success"></i>легковой автомобиль</li>
+                                    <li class="mb-2"><i class="fas fa-truck me-2 text-success"></i>грузовой автотранспорт</li>
+                                    <li><i class="fas fa-tractor me-2 text-success"></i>специализированный транспорт</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="service-card p-4 text-center border rounded h-100">
+                                <div class="service-icon mb-3">
+                                    <i class="fas fa-briefcase fa-3x text-primary"></i>
+                                </div>
+                                <h4>Коммерческая недвижимость</h4>
+                                <ul class="list-unstyled mt-3">
+                                    <li class="mb-2"><i class="fas fa-building me-2 text-success"></i>офисные помещения</li>
+                                    <li><i class="fas fa-store me-2 text-success"></i>административные помещения (аптека, кафе, склад и др.)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="service-card p-4 text-center border rounded h-100">
+                                <div class="service-icon mb-3">
+                                    <i class="fas fa-industry fa-3x text-primary"></i>
+                                </div>
+                                <h4>Промышленные объекты</h4>
+                                <ul class="list-unstyled mt-3">
+                                    <li class="mb-2"><i class="fas fa-industry me-2 text-success"></i>заводы</li>
+                                    <li class="mb-2"><i class="fas fa-industry me-2 text-success"></i>фабрики</li>
+                                    <li><i class="fas fa-hotel me-2 text-success"></i>пансионаты</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="service-card p-4 text-center border rounded h-100">
+                                <div class="service-icon mb-3">
+                                    <i class="fas fa-tools fa-3x text-primary"></i>
+                                </div>
+                                <h4>Оборудование</h4>
+                                <ul class="list-unstyled mt-3">
+                                    <li class="mb-2"><i class="fas fa-laptop me-2 text-success"></i>компьютеры</li>
+                                    <li class="mb-2"><i class="fas fa-print me-2 text-success"></i>офисная техника</li>
+                                    <li><i class="fas fa-chair me-2 text-success"></i>мебель</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.feature-item {
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 193, 7, 0.2);
+    border-color: #ffc107;
+}
+
+.feature-icon {
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover .feature-icon {
+    transform: scale(1.1);
+}
+
+.service-card {
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(13, 110, 253, 0.2);
+    border-color: #0d6efd;
+}
+
+.service-icon {
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+.list-group-item {
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+</style>
+{% endblock %}
