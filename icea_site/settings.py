@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+0+p)w6&)w^*_gk7c4o4=qe@qf)a)t!&)p**t4hs$rm1r_x!gy'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['neme5.pythonanywhere.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -104,8 +104,17 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
+# URL, по которому статические файлы будут доступны в браузере
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+# Полный путь на сервере к папке, куда соберутся статические файлы
+STATIC_ROOT = '/home/NeMe5/icea-master/staticfiles'
+
+# Дополнительные папки со статикой (если нужно)
+STATICFILES_DIRS = [
+    '/home/NeMe5/icea-master/static',  # ваша локальная папка со статикой
+]
+
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
