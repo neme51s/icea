@@ -10,12 +10,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
     {% block extra_css %}{% endblock %}
 </head>
 <body>
     <!-- Навигация -->
-    <nav class="navbar navbar-expand-xl navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <div class="logo-container">
                 <img src="{% static 'images/logo.png' %}" alt="ICEA Logo" class="logo-img" onerror="this.src='{% static 'images/placeholder-logo.png' %}'">
@@ -31,7 +30,8 @@
                 </a>
             </div>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <!-- Кнопка бургер-меню - ПЕРЕНЕСЕНА НАВЕРХ И БУДЕТ СПРАВА -->
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -42,13 +42,13 @@
                             {% if lang == 'ru' %}Главная{% else %}Home{% endif %}
                         </a>
                     </li>
-                    
-                    <!-- О нас с выпадающим меню по наведению -->
+
+                    <!-- О нас с выпадающим меню -->
                     <li class="nav-item dropdown dropdown-hover">
-                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             {% if lang == 'ru' %}О нас{% else %}About{% endif %}
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
                             <li><a class="dropdown-item" href="{% url 'about_company' %}?lang={{ lang }}">
                                 {% if lang == 'ru' %}Компания{% else %}Company{% endif %}
                             </a></li>
@@ -60,13 +60,13 @@
                             </a></li>
                         </ul>
                     </li>
-                    
-                    <!-- Услуги с выпадающим меню по наведению -->
+
+                    <!-- Услуги с выпадающим меню -->
                     <li class="nav-item dropdown dropdown-hover">
-                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             {% if lang == 'ru' %}Услуги{% else %}Services{% endif %}
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
                             <li><a class="dropdown-item" href="{% url 'services_valuation' %}?lang={{ lang }}">
                                 {% if lang == 'ru' %}Оценка имущества{% else %}Property Valuation{% endif %}
                             </a></li>
@@ -81,14 +81,14 @@
                             </a></li>
                         </ul>
                     </li>
-                    
+
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'contacts' %}?lang={{ lang }}">
                             {% if lang == 'ru' %}Контакты{% else %}Contacts{% endif %}
                         </a>
                     </li>
                 </ul>
-                
+
                 <!-- Переключатель языка -->
                 <div class="language-switcher">
                     {% if lang == 'ru' %}
@@ -144,7 +144,7 @@
                 <div class="col-lg-4 col-md-12 mb-4">
                     <h5>{% if lang == 'ru' %}Контакты{% else %}Contacts{% endif %}</h5>
                     <address>
-                        <p><i class="fas fa-map-marker-alt"></i> 
+                        <p><i class="fas fa-map-marker-alt"></i>
                             {% if lang == 'ru' %}
                                 г. Бишкек, ул. Орозбекова, 26
                             {% else %}
@@ -158,11 +158,11 @@
             </div>
             <hr>
             <div class="text-center">
-                <p>&copy; {% now "Y" %} ICEA. 
+                <p>&copy; {% now "Y" %} ICEA.
                     {% if lang == 'ru' %}
-                        Все права защищены.
+                        Сайт разработан <a href='https://t.me/Ne_Me5'>NeMe5</a>
                     {% else %}
-                        All rights reserved.
+                        The website was developed by <a href='https://t.me/Ne_Me5'>NeMe5</a>
                     {% endif %}
                 </p>
             </div>
